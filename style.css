@@ -22,6 +22,10 @@ header{
     width: 150px;
 }
 
+.logo-icon{
+    display: none;
+}
+
 .navbar div{
     margin: 5px 20px;
     cursor: pointer;
@@ -41,6 +45,21 @@ header{
     color: red;
 }
 
+.desc{
+    display: none;
+    background-color: #fff;
+    width: 170px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 15px;
+    list-style: none;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 555;
+}
+
 .icon-box{
     display: flex;
     flex-direction: row;
@@ -49,6 +68,10 @@ header{
 
 .location{
     position: relative;
+}
+
+.location:hover .desc{
+    display: inline-block;
 }
 
 .location::after{
@@ -88,6 +111,10 @@ header{
 
 }
 
+.navbar-menu{
+    display: flex;
+}
+
 .text-logo{
     width: 600px;
     text-align: center;
@@ -95,12 +122,25 @@ header{
     font-weight: 500;
 }
 
-.text-logo span{
+.logo-red-text{
     color: #fe696a;
     position: relative;
+    cursor: pointer;
+    transition: 0.3 ease;
 }
 
-.text-logo span::after{
+.logo-red-text:hover {
+    color: red;
+}
+
+.logo-red-text:hover .desc{
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.logo-red-text::after{
     content: "";
     background-color: #fe696a;
     display: inline-block;
@@ -558,6 +598,10 @@ footer {
     .cards{
         width: 100%;
     }
+
+    .navbar-menu{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -593,5 +637,16 @@ footer {
 
     .emblem-box{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-cartzilla{
+        display: none;
+        
+    }
+
+    .logo-icon{
+        display: inline-block;
+        width: 100px;
+
     }
 }
